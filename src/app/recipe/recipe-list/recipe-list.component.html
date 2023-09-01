@@ -1,0 +1,13 @@
+
+<div class="row-fluid">
+    <div class="col-sx-12">
+        <button  style="margin-left: 15px;"class="btn btn-success"(click)="onNewRecipe()">Add new recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row-fluid">
+    <div class="col-xs-12">
+<app-recipe-item  *ngFor="let recipeEl of recipes; let i=index" [recipe]="recipeEl" [index]="i" (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
+</div>
+</div>
+
